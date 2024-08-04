@@ -1,8 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { AngularCalendarYearViewComponent } from './angular-calendar-year-view.component';
-import { PopoverModule } from 'ngx-bootstrap/popover'
+import { PopoverModule } from 'ngx-bootstrap/popover';
 import { CommonModule } from '@angular/common';
-
 
 @NgModule({
   declarations: [
@@ -16,13 +15,13 @@ import { CommonModule } from '@angular/common';
     AngularCalendarYearViewComponent
   ]
 })
-export class AngularCalendarYearViewModule { 
-  public static forRoot(): ModuleWithProviders {
+export class AngularCalendarYearViewModule {
+  public static forRoot(): ModuleWithProviders<AngularCalendarYearViewModule> {
     return {
       ngModule: AngularCalendarYearViewModule,
       providers: [
-        PopoverModule.forRoot().providers
+        ...PopoverModule.forRoot().providers
       ]
-    }
+    };
   }
 }

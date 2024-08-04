@@ -175,5 +175,8 @@
       }
     }
   },
-  "defaultProject": "angular-year-calendar"
+  "defaultProject": "angular-year-calendar",
+  "cli": {
+    "analytics": false
+  }
 }
